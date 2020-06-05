@@ -1,0 +1,69 @@
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import Pic from '../../../Assets/skills.jpg'
+
+export default class Home extends Component {
+    constructor() {
+        super();
+        this.myRef = React.createRef();
+        this.state = {
+          words: ["Developer.", "Designer.", "FrontEnd."],
+          wait: 3000
+        };
+        this.TyperWriter()
+      }
+
+      TyperWriter = () =>{
+        let txt = "";
+        let wordIndex = 0;
+        let isDeleting = false;
+        this.Type(txt,wordIndex, isDeleting)
+      }
+
+      // Typing logic
+
+      Type = (txt,wordIndex, isDeleting) => {
+        const CurrInd = wordIndex % this.state.words.length;
+        const fullTxt = this.state.words[CurrInd];
+        if (isDeleting) {
+          txt = fullTxt.substring(0, txt.length - 1);
+        } else {
+          txt = fullTxt.substring(0, txt.length + 1);
+        }
+        // Speed to write and remove
+
+        let typeSpeed = 300;
+        if (isDeleting) {
+          typeSpeed = typeSpeed / 2;
+        }
+        if (!isDeleting && txt === fullTxt) {
+          typeSpeed = this.state.wait;
+          isDeleting = true;
+        } else if (isDeleting && txt === "") {
+          isDeleting = false;
+          wordIndex++;
+          typeSpeed = 500;
+        }
+        if(this.myRef.current !== null){
+        this.myRef.current.innerHTML = `<span id="txt">${txt}</span>`;
+        setTimeout((Txt = txt, WI = wordIndex, Del = isDeleting) => this.Type(Txt, WI, Del), typeSpeed)
+        }else
+          setTimeout((Txt = txt, WI = wordIndex, Del = isDeleting) => this.Type(Txt, WI, Del), typeSpeed)
+      };
+      render() {
+        return (
+          <Section Pic={Pic}>
+            <h2 className="Akshay">
+              Akshay Rathi{' '}<span id="txt-type" ref={this.myRef}></span>{" "}
+            </h2>
+            </Section>
+        );
+      }
+}
+const Section = styled.div` 
+  background-size: cover;
+  background-attachment: fixed;
+  width: 80vw;
+  height: 95vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${props => props.Pic});
+`
