@@ -7,10 +7,10 @@ function NavItem(props) {
   const Clicked =()=>{ props.SideBarAction(props.name)}
   return (
     <Navitem onClick ={ Clicked }>
-      <Icon Size = {props.size} active={props.active}>
+      <Icon active={props.active} color={props.active === "#1894ff" ? '#fff' : '#BBB'}>
           <i className={props.icon}></i>
       </Icon>
-      <Text>
+      <Text color={props.active === "#1894ff" ? '#fff' : '#BBB'}>
         <p>{props.name}</p>
       </Text>
     </Navitem>
@@ -30,16 +30,16 @@ const Icon = styled.div `
   align-items: center;
   width: 30px;
   height: 30px;
-  color: #fff;
+  color: ${props => props.color};
   font-size: 14px;
   background-color: ${props => props.active};
   border-radius: 50%;
 `
 const Text = styled.div ` 
 margin: 8px 0px 5px 10px;
-	color: white;
+color: ${props => props.color};
 	font-size: 13px;
-	font-weight: bold;
+	font-weight: 600;
 	transition: all 0.2s ease-in-out 0s;
 `
 const mapDispatchToProps = dispatch =>{

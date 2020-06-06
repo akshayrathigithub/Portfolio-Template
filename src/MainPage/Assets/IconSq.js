@@ -6,12 +6,11 @@ export default function IconSq(props) {
   return (
     <BorderSquare>
       <div style={{ width: '75%', height: '15rem' }} onMouseEnter={() => SetColor(!Color)} onMouseLeave={() => SetColor(!Color)} >
-        <Head color={Color ? '#2c3e50' : undefined} >
+        <Head color={Color ? '#2c3e50' : 'transparent'} >
           <BigSquare>
             <BorderOne color={Color ? '#1894ff' : '#2c3e50'} />
             <Square color={Color ? '#1894ff' : '#2c3e50'}>
-              {/* <div style={{ transform: 'rotate(-135deg)' }}>{props.Icon} </div> */}
-              <div style={{ transform: 'rotate(-135deg)', color: 'white', fontSize: props.Size }}><i className={props.Icon}></i> </div> 
+              <div style={{ transform: 'rotate(-135deg)', color: 'white', fontSize: props.Size }}><i className={props.Icon}></i> </div>
             </Square>
             <BorderTwo color={Color ? '#1894ff' : '#2c3e50'} />
           </BigSquare>
@@ -35,31 +34,25 @@ const Square = styled.div`
   `
 
 const BorderOne = styled.div`
-    height: 80px;
+  height: 80px;
   width: 4px;
   margin-right: 7px;
   background-color: ${props => props.color};`
 
 const BorderTwo = styled.div`
-    height: 80px;
+  height: 80px;
   width: 4px;
   margin-left: 7px;
-  background-color: ${props => props.color};`
-
-const Background = styled.div`
-  position: absolute;
-  width: 20rem;
-  height: 10rem;
   background-color: ${props => props.color};
-  top: 48%;
   `
+
 const Head = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
 background-color:${ props => props.color};
-width: 100%;
-height: 15rem;
+width: 110%;
+height: 12rem;
 `
 const BigSquare = styled.div`
   display: flex;
@@ -98,4 +91,5 @@ letter-spacing: 0.7px;
 line-height: 24px;
 font-weight: 300;
 color: white;
+padding: 10px
 `

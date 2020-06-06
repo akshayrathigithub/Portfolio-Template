@@ -7,7 +7,6 @@ import Pic_2 from '../../../Assets/bg2.jpg'
 import Pic_3 from '../../../Assets/bg3.jpg'
 import Pic_4 from '../../../Assets/bg4.jpg'
 import Pic_5 from '../../../Assets/Profile.jpg'
-import Pic_6 from '../../../Assets/work.jpg'
 import HeadingText from '../../../Assets/HeadingText'
 import Carousel from '../../../Assets/Carousel'
 
@@ -83,13 +82,7 @@ export default function About() {
     const [Testimonial, SetTestimonial] = useState(testimonials)
     const [Left, SetLeft] = useState(-485)
     const [Ind, SetInd] = useState(2)
-    // useEffect(() => {
-    //     if (Index.case) {
-    //         SetLeft(Left + 32)
-    //     } else {
-    //         SetLeft(Left - 32)
-    //     }
-    // }, [Index])
+
     const Center = (Case) => {
         let Arr = [...Testimonial]
         if (Case) {
@@ -102,7 +95,6 @@ export default function About() {
             } else {
                 SetLeft(Left - 485)
             }
-            console.log(ele, Arr)
             SetInd(Ind + 1)
         } else {
             let ele = Arr.splice(5, 1)
@@ -131,14 +123,18 @@ export default function About() {
                     <Group_2>
                         <Pic Pic={Pic_5} ></Pic>
                         <Text>
-                            <p>HELLO,</p>
+                            <p style={{ fontWeight: '600',
+                                fontSize: '22px',
+                                color: '#fff'
+                                }}>HELLO,</p>
                             <p style={{
                                 fontWeight: '400',
                                 fontSize: '14px',
                                 fontStyle: 'italic', lineHeight: '24px',
                                 letterSpacing: '0.7px',
                                 paddingBottom: '15px',
-                                borderBottom: '1px solid #3a4a5d', margin: '1rem 0rem 0rem 0rem'
+                                borderBottom: '1px solid #3a4a5d', margin: '1rem 0rem 0rem 0rem',
+                                color: "#BBB"
                             }}>I’m Saad Tarek. I designed this site so you can get to know me on a personal level. My career as a UX Designer, my portfolio, my personal photography, my blog, my favorite quotes, and so much more. So please sit back and enjoy! </p>
                         </Text>
                     </Group_2>
@@ -146,15 +142,14 @@ export default function About() {
                 <Group_3>
                     <HeadingText Text="SERVICE" ConnectorLength={12} />
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                        <IconSq Head="WEB DESIGN" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="45px" />
-                        <IconSq Head="RESPONSIVE UI" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="45px" />} />
-                        <IconSq Head="DB DESIGN" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="45px" />
-                        <IconSq Head="PHOTOGRAPHY" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="45px" />
+                        <IconSq Head="WEB DESIGN" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="35px" />
+                        <IconSq Head="RESPONSIVE UI" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="35px" />} />
+                        <IconSq Head="DB DESIGN" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="35px" />
+                        <IconSq Head="PHOTOGRAPHY" Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. " Icon="fas fa-laptop" Size="35px" />
                     </div>
                 </Group_3>
                 <Group_4>
                     <HeadingText Text="TESTIMONIALS" ConnectorLength={15} />
-                    {console.log(Left)}
                     <CarouselRow Left={Left}>
                         {Testimonial.map((T, ind) => {
                             if (ind === Ind) {
@@ -205,7 +200,7 @@ const Text = styled.div`
   width: 57rem;
   text-align: start;
   margin-left: 1rem;
-  margin-top: 0rem;
+  margin-top: 3rem;
 `
 const Group_3 = styled.div`
 position: relative;
