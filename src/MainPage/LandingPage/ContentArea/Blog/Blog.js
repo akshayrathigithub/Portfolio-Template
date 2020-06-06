@@ -314,7 +314,7 @@ const PostOne = styled.div`
         width: 2.8rem;
         height: 2.8rem;
     }
-    &:hover .fas {
+    &:hover #Share .fas {
         font-size: 15px;
     }
 
@@ -337,7 +337,7 @@ const PostOne = styled.div`
         justify-content: center;
         align-items: center;
     }
-    #ShareDiv .fas {
+    #Share .fas {
         color: #fff;
         font-size: 0px;
         transition: font-size 0.25s;

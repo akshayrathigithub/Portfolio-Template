@@ -60,7 +60,7 @@ export default function Resume() {
                     <Grid>
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '1rem' }}>
-                                <div><i className="fas fa-laptop"></i></div>
+                                <div style={{ color: '#1894ff' }}><i className="fas fa-laptop"></i></div>
                                 <div style={{
                                     fontSize: '18px',
                                     fontWeight: '600',
@@ -102,7 +102,7 @@ export default function Resume() {
                         </div>
                         <div>
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginBottom: '1rem' }}>
-                                <div><i className="fas fa-laptop"></i></div>
+                            <div style={{ color: '#1894ff' }}><i className="fas fa-laptop"></i></div>
                                 <div style={{
                                     fontSize: '18px',
                                     fontWeight: '600',
@@ -156,7 +156,7 @@ export default function Resume() {
                                     <Path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#1894ff" strokeWidth="5" fillOpacity="0">
                                     </Path>
                                 </svg>
-                                <p style={{ marginTop: '15px' }}>Communication</p>
+                                <p style={{ marginTop: '15px', color: '#fff' }}>Communication</p>
                             </CircleWrapper>
                             <CircleWrapper data-value="0.8" data-color="#1894ff">
                                 <svg viewBox="0 0 100 100" style={{ display: 'inline-block', width: '10rem', marginTop: '15px' }}>
@@ -165,7 +165,7 @@ export default function Resume() {
                                     <Path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#1894ff" strokeWidth="5" fillOpacity="0">
                                     </Path>
                                 </svg>
-                                <p style={{ marginTop: '15px' }}>Team Work</p>
+                                <p style={{ marginTop: '15px', color: '#fff' }}>Team Work</p>
                             </CircleWrapper>
                             <CircleWrapper data-value="0.8" data-color="#1894ff">
                                 <svg viewBox="0 0 100 100" style={{ display: 'block', width: '10rem', marginTop: '15px' }}>
@@ -174,7 +174,7 @@ export default function Resume() {
                                     <Path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#1894ff" strokeWidth="5" fillOpacity="0">
                                     </Path>
                                 </svg>
-                                <p style={{ marginTop: '15px' }}>Speed</p>
+                                <p style={{ marginTop: '15px', color: '#fff' }}>Speed</p>
                             </CircleWrapper>
                             <CircleWrapper data-value="0.8" data-color="#1894ff">
                                 <svg viewBox="0 0 100 100" style={{ display: 'block', width: '10rem', marginTop: '15px' }}>
@@ -183,17 +183,17 @@ export default function Resume() {
                                     <Path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#1894ff" strokeWidth="5" fillOpacity="0">
                                     </Path>
                                 </svg>
-                                <p style={{ marginTop: '15px' }}>Creativity</p>
+                                <p style={{ marginTop: '15px', color: '#fff' }}>Creativity</p>
                             </CircleWrapper>
                         </CircleGrid>
-
+                        <HeadingText Text="TECHNICAL SKILLS" width={18} ConnectorLength={18} />
                         <div style={{ display: 'grid', gridTemplateRows: '5rem 5rem', gridTemplateColumns: '1fr 1fr', padding: '1rem', rowGap: '3rem' }}>
                             <div style={{ position: 'relative' }}>
                                 <ProgressDisp Anim={Flag ? "news" : ""}>{stat.Html}</ProgressDisp>
                                 <Progress>
                                     <ProgressValue Anim={Flag ? "load" : ""}></ProgressValue>
                                 </Progress>
-                                <div>
+                                <div style={{ color: '#fff', marginTop: '1rem', marginLeft: '1rem' }}>
                                     <p>JavaScript</p>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@ export default function Resume() {
                                 <Progress>
                                     <ProgressValue Anim={Flag ? "load" : ""}></ProgressValue>
                                 </Progress>
-                                <div>
+                                <div style={{ color: '#fff', marginTop: '1rem', marginLeft: '1rem' }}>
                                     <p>Html</p>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@ export default function Resume() {
                                 <Progress>
                                     <ProgressValue Anim={Flag ? "load" : ""}></ProgressValue>
                                 </Progress>
-                                <div>
+                                <div style={{ color: '#fff', marginTop: '1rem', marginLeft: '1rem' }}>
                                     <p>CSS</p>
                                 </div>
                             </div>
@@ -220,21 +220,12 @@ export default function Resume() {
                                 <Progress>
                                     <ProgressValue Anim={Flag ? "load" : ""}></ProgressValue>
                                 </Progress>
-                                <div>
+                                <div style={{ color: '#fff', marginTop: '1rem', marginLeft: '1rem' }}>
                                     <p>React</p>
                                 </div>
                             </div>
                         </div>
                     </Skills>
-
-
-
-
-
-
-
-
-
                 </Group_1>
             </Section>
         </div>
@@ -344,6 +335,7 @@ height: 4rem;
 display: flex;
 justify-content: center;
 align-items: center;
+margin: 4.5rem 0rem;
 `
 const ResBtn = styled.div` 
 position: relative;
@@ -354,7 +346,7 @@ background: transparent;
 display: flex;
 align-items: center;
 box-shadow: 0 0 15px 0px #1b2838;
-color: white;
+color: #fff;
 z-index: 1;
 cursor: pointer;
 
@@ -388,6 +380,7 @@ display: flex;
   align-items: center;
   position: relative;
   margin-top: 2rem;
+  margin-left: 1rem;
   padding: 0 5px;
   height: 8px;
   width: 600px;
