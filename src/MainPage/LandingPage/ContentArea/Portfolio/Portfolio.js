@@ -52,7 +52,7 @@ export default function Portfolio() {
                                     <ProjectGrid Rows=" 20rem 20rem" Columns="25rem 25rem 25rem" >
                                         <Project color="green">
                                             <div className="FrontFace"></div>
-                                            <div className="BackFace">Akshay Rathi</div>
+                                            <div className="BackFace">Project Name</div>
                                         </Project>
                                         <Project color="red">
                                             <div className="FrontFace"></div>

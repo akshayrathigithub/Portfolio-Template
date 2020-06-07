@@ -54,7 +54,7 @@ export default function Contact() {
                 <Group_1>
                     <HeadingText Text="GET IN TOUCH" width={12} ConnectorLength={12} />
                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                        <IconSq Head="LOCATION" Text="Saharanpur, UttarPradesh" Icon="fas fa-map-marker-alt" Size="45px" />
+                        <IconSq Head="LOCATION" Text="New York, USA" Icon="fas fa-map-marker-alt" Size="45px" />
                         <IconSq Head="PHONE" Text="+123456789" Icon="fas fa-mobile-alt" Size="45px" />
                         <IconSq Head="EMAIL" Text="test@test.com" Icon="fas fa-envelope" Size="45px" />
                     </div>

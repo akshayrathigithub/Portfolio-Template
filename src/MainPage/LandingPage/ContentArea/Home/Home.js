@@ -93,7 +93,7 @@ font-family: inherit;
 letter-spacing: 4px;
 line-height: 1;
 `
-const Third = styled.p`
+const Third = styled.div`
 margin-left: 3rem;
 font-size: 20px;
 color: #BBB;
